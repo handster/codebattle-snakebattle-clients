@@ -13,6 +13,7 @@ public class Main {
     public static void main(String[] args) throws URISyntaxException, IOException {
         SnakeBattleClient client = new SnakeBattleClient(SERVER_ADDRESS);
         client.run(gameBoard -> {
+
             var random = new Random(System.currentTimeMillis());
             var direction = Direction.values()[random.nextInt(Direction.values().length)];
             var act = random.nextInt() % 2 == 0;
